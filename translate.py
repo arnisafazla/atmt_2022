@@ -111,7 +111,7 @@ def main(args):
 
     # Write to file
     if args.output is not None:
-        with open(args.output, 'w') as out_file:
+        with open(args.output, 'w', encoding="utf-8") as out_file:
             for sent_id in range(len(all_hyps.keys())):
                 out_file.write(all_hyps[sent_id] + '\n')
 
