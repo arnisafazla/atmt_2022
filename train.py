@@ -98,6 +98,14 @@ def main(args):
     best_validate = float('inf')
 
     for epoch in range(last_epoch + 1, args.max_epoch):
+        # '''
+        # Apply Online BPE-Dropout:
+        #     In every epoch start, randomly drop out some segments. --dropout 0.1
+        # '''
+        # os.system("subword-nmt apply-bpe -c ./data/en-fr/bpe/bpe.codes --vocabulary ./data/en-fr/bpe/train_dict.en  < ./data/en-fr/preprocessed/train.en > ./data/en-fr/bpe/train.en --dropout 0.1")
+        # os.system("subword-nmt apply-bpe -c ./data/en-fr/bpe/bpe.codes --vocabulary ./data/en-fr/bpe/train_dict.fr  < ./data/en-fr/preprocessed/train.fr > ./data/en-fr/bpe/train.fr --dropout 0.1")
+        # os.system("python preprocess.py --target-lang en --source-lang fr --dest-dir ./data/en-fr/prepared/ --train-prefix ./data/en-fr/bpe/train --threshold-src 1 --threshold-tgt 1 --num-words-src 4000 --num-words-tgt 4000")
+
         train_loader = \
             torch.utils.data.DataLoader(train_dataset, num_workers=1, collate_fn=train_dataset.collater,
                                         batch_sampler=BatchSampler(train_dataset, args.max_tokens, args.batch_size, 1,

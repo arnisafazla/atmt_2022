@@ -95,7 +95,7 @@ def main(args):
 def build_dictionary(filenames, tokenize=word_tokenize):
     dictionary = Dictionary()
     for filename in filenames:
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding="UTF-8") as file:
             for line in file:
                 for symbol in word_tokenize(line.strip()):
                     dictionary.add_word(symbol)
@@ -112,7 +112,7 @@ def make_binary_dataset(input_file, output_file, dictionary, tokenize=word_token
             unk_counter.update([word])
 
     tokens_list = []
-    with open(input_file, 'r') as inf:
+    with open(input_file, 'r', encoding="UTF-8") as inf:
         for line in inf:
             tokens = dictionary.binarize(line.strip(), word_tokenize, append_eos, consumer=unk_consumer)
             nsent, ntok = nsent + 1, ntok + len(tokens)

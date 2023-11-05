@@ -1,0 +1,95 @@
+COMMAND: train.py --data data/en-fr/prepared/ --source-lang fr --target-lang en --save-dir .\assignments\03\MyBaseline\FirstModel\checkpoints\ --cuda --lr 0.0003 --log-file .\assignments\03\MyBaseline\FirstModel\train_log.log
+Arguments: {'cuda': True, 'data': 'data/en-fr/prepared/', 'source_lang': 'fr', 'target_lang': 'en', 'max_tokens': None, 'batch_size': 1, 'train_on_tiny': False, 'arch': 'lstm', 'max_epoch': 10000, 'clip_norm': 4.0, 'lr': 0.0003, 'patience': 3, 'log_file': '.\\assignments\\03\\MyBaseline\\FirstModel\\train_log.log', 'save_dir': '.\\assignments\\03\\MyBaseline\\FirstModel\\checkpoints\\', 'restore_file': 'checkpoint_last.pt', 'save_interval': 1, 'no_save': False, 'epoch_checkpoints': False, 'encoder_embed_dim': 64, 'encoder_embed_path': None, 'encoder_hidden_size': 64, 'encoder_num_layers': 1, 'encoder_bidirectional': 'True', 'encoder_dropout_in': 0.25, 'encoder_dropout_out': 0.25, 'decoder_embed_dim': 64, 'decoder_embed_path': None, 'decoder_hidden_size': 128, 'decoder_num_layers': 1, 'decoder_dropout_in': 0.25, 'decoder_dropout_out': 0.25, 'decoder_use_attention': 'True', 'decoder_use_lexical_model': 'False', 'device_id': 0}
+Loaded a source dictionary (fr) with 4000 words
+Loaded a target dictionary (en) with 4000 words
+Built a model with 1308576 parameters
+Epoch 000: loss 4.731 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 31.63 | clip 0.9985
+Epoch 000: valid_loss 5.01 | num_tokens 9.39 | batch_size 500 | valid_perplexity 150
+Epoch 001: loss 4.101 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 36.86 | clip 1
+Epoch 001: valid_loss 4.5 | num_tokens 9.39 | batch_size 500 | valid_perplexity 90.1
+Epoch 002: loss 3.786 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 39.96 | clip 1
+Epoch 002: valid_loss 4.43 | num_tokens 9.39 | batch_size 500 | valid_perplexity 83.8
+Epoch 003: loss 3.583 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 42.29 | clip 1
+Epoch 003: valid_loss 4.38 | num_tokens 9.39 | batch_size 500 | valid_perplexity 79.9
+Epoch 004: loss 3.429 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 44.35 | clip 1
+Epoch 004: valid_loss 4.15 | num_tokens 9.39 | batch_size 500 | valid_perplexity 63.2
+Epoch 005: loss 3.308 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 45.76 | clip 1
+Epoch 005: valid_loss 4.02 | num_tokens 9.39 | batch_size 500 | valid_perplexity 55.7
+Epoch 006: loss 3.202 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 47.08 | clip 1
+Epoch 006: valid_loss 3.94 | num_tokens 9.39 | batch_size 500 | valid_perplexity 51.5
+Epoch 007: loss 3.106 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 48.38 | clip 1
+Epoch 007: valid_loss 3.69 | num_tokens 9.39 | batch_size 500 | valid_perplexity 40
+Epoch 008: loss 3.03 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 49.3 | clip 1
+Epoch 008: valid_loss 3.76 | num_tokens 9.39 | batch_size 500 | valid_perplexity 42.9
+Epoch 009: loss 2.944 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 49.81 | clip 1
+Epoch 009: valid_loss 3.71 | num_tokens 9.39 | batch_size 500 | valid_perplexity 40.8
+Epoch 010: loss 2.872 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 50.5 | clip 1
+Epoch 010: valid_loss 3.61 | num_tokens 9.39 | batch_size 500 | valid_perplexity 36.8
+Epoch 011: loss 2.818 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 50.88 | clip 1
+Epoch 011: valid_loss 3.5 | num_tokens 9.39 | batch_size 500 | valid_perplexity 33.3
+Epoch 012: loss 2.756 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.24 | clip 1
+Epoch 012: valid_loss 3.37 | num_tokens 9.39 | batch_size 500 | valid_perplexity 29.1
+Epoch 013: loss 2.7 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.56 | clip 0.9999
+Epoch 013: valid_loss 3.44 | num_tokens 9.39 | batch_size 500 | valid_perplexity 31.1
+Epoch 014: loss 2.658 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.86 | clip 0.9998
+Epoch 014: valid_loss 3.37 | num_tokens 9.39 | batch_size 500 | valid_perplexity 29.2
+Epoch 015: loss 2.614 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.1 | clip 0.9996
+Epoch 015: valid_loss 3.23 | num_tokens 9.39 | batch_size 500 | valid_perplexity 25.4
+Epoch 016: loss 2.572 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.34 | clip 1
+Epoch 016: valid_loss 3.23 | num_tokens 9.39 | batch_size 500 | valid_perplexity 25.3
+Epoch 017: loss 2.536 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.96 | clip 0.9998
+Epoch 017: valid_loss 3.16 | num_tokens 9.39 | batch_size 500 | valid_perplexity 23.5
+Epoch 018: loss 2.504 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.31 | clip 0.9997
+Epoch 018: valid_loss 3.14 | num_tokens 9.39 | batch_size 500 | valid_perplexity 23.1
+Epoch 019: loss 2.467 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.64 | clip 0.9999
+Epoch 019: valid_loss 3.15 | num_tokens 9.39 | batch_size 500 | valid_perplexity 23.3
+Epoch 020: loss 2.44 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.64 | clip 0.9997
+Epoch 020: valid_loss 3.09 | num_tokens 9.39 | batch_size 500 | valid_perplexity 22
+Epoch 021: loss 2.411 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.33 | clip 0.9997
+Epoch 021: valid_loss 3.08 | num_tokens 9.39 | batch_size 500 | valid_perplexity 21.8
+Epoch 022: loss 2.386 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.97 | clip 0.9996
+Epoch 022: valid_loss 3.05 | num_tokens 9.39 | batch_size 500 | valid_perplexity 21.2
+Epoch 023: loss 2.366 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.12 | clip 0.9996
+Epoch 023: valid_loss 3.01 | num_tokens 9.39 | batch_size 500 | valid_perplexity 20.3
+Epoch 024: loss 2.348 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 52.55 | clip 0.9995
+Epoch 024: valid_loss 2.99 | num_tokens 9.39 | batch_size 500 | valid_perplexity 19.9
+Epoch 025: loss 2.325 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.93 | clip 0.9998
+Epoch 025: valid_loss 3 | num_tokens 9.39 | batch_size 500 | valid_perplexity 20
+Epoch 026: loss 2.305 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.51 | clip 0.9992
+Epoch 026: valid_loss 2.9 | num_tokens 9.39 | batch_size 500 | valid_perplexity 18.2
+Epoch 027: loss 2.286 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.81 | clip 0.9995
+Epoch 027: valid_loss 2.89 | num_tokens 9.39 | batch_size 500 | valid_perplexity 17.9
+Epoch 028: loss 2.268 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.97 | clip 0.9992
+Epoch 028: valid_loss 2.83 | num_tokens 9.39 | batch_size 500 | valid_perplexity 16.9
+Epoch 029: loss 2.25 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.88 | clip 0.999
+Epoch 029: valid_loss 2.88 | num_tokens 9.39 | batch_size 500 | valid_perplexity 17.8
+Epoch 030: loss 2.23 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.36 | clip 0.9997
+Epoch 030: valid_loss 2.84 | num_tokens 9.39 | batch_size 500 | valid_perplexity 17
+Epoch 031: loss 2.218 | lr 0.0003 | num_tokens 9.431 | batch_size 1 | grad_norm 51.96 | clip 0.9991
+Epoch 031: valid_loss 2.83 | num_tokens 9.39 | batch_size 500 | valid_perplexity 17
+No validation set improvements observed for 3 epochs. Early stop!
+
+
+[2023-11-04 17:51:20] COMMAND: translate.py --data data/en-fr/prepared --dicts data/en-fr/prepared --checkpoint-path .\assignments\03\MyBaseline\FirstModel\checkpoints\checkpoint_best.pt --output .\assignments\03\MyBaseline\FirstModel\translation.txt --cuda --batch-size 25
+[2023-11-04 17:51:20] Arguments: {'cuda': True, 'data': 'data/en-fr/prepared', 'source_lang': 'fr', 'target_lang': 'en', 'max_tokens': None, 'batch_size': 25, 'train_on_tiny': False, 'arch': 'lstm', 'max_epoch': 10000, 'clip_norm': 4.0, 'lr': 0.0003, 'patience': 3, 'log_file': '.\\assignments\\03\\MyBaseline\\FirstModel\\train_log.log', 'save_dir': '.\\assignments\\03\\MyBaseline\\FirstModel\\checkpoints\\', 'restore_file': 'checkpoint_last.pt', 'save_interval': 1, 'no_save': False, 'epoch_checkpoints': False, 'encoder_embed_dim': 64, 'encoder_embed_path': None, 'encoder_hidden_size': 64, 'encoder_num_layers': 1, 'encoder_bidirectional': 'True', 'encoder_dropout_in': 0.25, 'encoder_dropout_out': 0.25, 'decoder_embed_dim': 64, 'decoder_embed_path': None, 'decoder_hidden_size': 128, 'decoder_num_layers': 1, 'decoder_dropout_in': 0.25, 'decoder_dropout_out': 0.25, 'decoder_use_attention': 'True', 'decoder_use_lexical_model': 'False', 'device_id': 0, 'seed': 42, 'dicts': 'data/en-fr/prepared', 'checkpoint_path': '.\\assignments\\03\\MyBaseline\\FirstModel\\checkpoints\\checkpoint_best.pt', 'output': '.\\assignments\\03\\MyBaseline\\FirstModel\\translation.txt', 'max_len': 128}
+[2023-11-04 17:51:20] Loaded a source dictionary (fr) with 4000 words
+[2023-11-04 17:51:20] Loaded a target dictionary (en) with 4000 words
+[2023-11-04 17:51:20] Loaded a model from checkpoint .\assignments\03\MyBaseline\FirstModel\checkpoints\checkpoint_best.pt
+
+python .\RemoveBpeSymbols.py .\assignments\03\MyBaseline\FirstModel\translation.txt .\assignments\03\MyBaseline\FirstModel\translation.bpe.txt
+
+bash scripts/postprocess.sh assignments/03/MyBaseline/FirstModel/translation.bpe.txt assignments/03/MyBaseline/FirstModel/translations.p.txt en
+
+$ cat assignments/03/MyBaseline/FirstModel/translations.p.txt | sacrebleu data/en-fr/raw/test.en
+{
+ "name": "BLEU",
+ "score": 12.1,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.3.1",
+ "verbose_score": "38.2/17.4/8.5/3.8 (BP = 1.000 ratio = 1.462 hyp_len = 5690 ref_len = 3892)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.3.1"
+}
