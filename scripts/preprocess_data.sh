@@ -27,7 +27,7 @@ for lang in $src_lang $tgt_lang
 
         # normalise and tokenize punctuation in training
         # split for truecase model training
-        cat $raw_data/train.$lang | perl $moses_scripts/normalize-punctuation.perl -l $lang | perl $moses_scripts/tokenizer.perl -l $lang -a -q > $preprocessed/train.$lang
+        cat $raw_data/train.$lang.bpe | perl $moses_scripts/normalize-punctuation.perl -l $lang | perl $moses_scripts/tokenizer.perl -l $lang -a -q > $preprocessed/train.$lang.bpe
         
         # train truecase model for language
         perl $moses_scripts/train-truecaser.perl --model $preprocessed/tm.$lang --corpus $preprocessed/train.$lang
@@ -36,7 +36,7 @@ for lang in $src_lang $tgt_lang
         for split in train tiny_train test valid
             do
                 echo "preprocessing $split split for language $lang..."            
-                cat $raw_data/$split.$lang | perl $moses_scripts/normalize-punctuation.perl -l $lang | perl $moses_scripts/tokenizer.perl -l $lang -a -q | perl $moses_scripts/truecase.perl --model $preprocessed/tm.$lang >| $preprocessed/$split.$lang
+                cat $raw_data/$split.$lang.bpe | perl $moses_scripts/normalize-punctuation.perl -l $lang | perl $moses_scripts/tokenizer.perl -l $lang -a -q | perl $moses_scripts/truecase.perl --model $preprocessed/tm.$lang.bpe >| $preprocessed/$split.$lang.bpe
                 
             done
     done
